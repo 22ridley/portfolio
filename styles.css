@@ -30,7 +30,7 @@ body {
   font-weight: bold;
   font-size: large;
   z-index: 2;
-  padding-left: 70px;
+  padding-left: 80px;
 }
 
 .arrow {
@@ -42,7 +42,7 @@ body {
   cursor: pointer;
   text-decoration: none;
   color: black;
-  border: 4px solid #f2ede5;
+  border: 4px solid rgb(242, 237, 229, 0);
   padding: 10px;
 }
 
@@ -53,12 +53,14 @@ body {
 }
 
 .projects-all {
-  padding-left: 70px;
+  padding-left: 90px;
+  padding-bottom: 60px;
 }
 
 .desc {
   font-size: x-large;
   font-weight: 10;
+  line-height: 150%;
 }
 
 .purple {
@@ -91,6 +93,7 @@ h1 {
 
 h2 {
   padding-top: 50px;
+  padding-bottom: 30px;
 }
 
 .icons {
@@ -127,8 +130,29 @@ h2 {
 }
 
 .projects {
-  grid-template-columns: 200px 200px;
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
   grid-row: auto auto;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  grid-column-gap: 0;
+  grid-row-gap: 50px;
+}
+
+.prev {
+  width: 30vw;
+  border-radius: 10px;
+}
+
+.prev:hover {
+  border: 4px solid #ac6195;
+  box-shadow: 4px 4px 4px gray;
+}
+
+h3 {
+  padding-right: 20px;
+}
+
+.project p {
+  padding-right: 15vw;
+  line-height: 150%;
+  font-size: large;
 }
