@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "Schib";
+  src: url("fonts/SchibstedGrotesk-VariableFont_wght.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  font-family: "Schib";
+  background-color: #f2ede5;
+}
+
+.all {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.header {
+  background-color: rgb(242, 237, 229, 0.5);
+  top: 0;
+  position: sticky;
+}
+
+.header-links {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  padding: 30px;
+  font-weight: bold;
+  font-size: large;
+  z-index: 2;
+  padding-left: 50px;
+}
+
+.arrow {
+  width: 14px;
+  padding-left: 5px;
+}
+
+.jump {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.jump:hover {
+  color: rgb(120, 113, 102);
+}
