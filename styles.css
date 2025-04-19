@@ -22,7 +22,7 @@ body {
 }
 
 .header-links {
-  width: 40%;
+  max-width: 40%;
   display: flex;
   justify-content: space-between;
   color: black;
@@ -42,10 +42,14 @@ body {
   cursor: pointer;
   text-decoration: none;
   color: black;
+  border: 4px solid #f2ede5;
+  padding: 10px;
 }
 
 .jump:hover {
-  color: rgb(120, 113, 102);
+  border-radius: 20px;
+  border: 3px solid #ac6195;
+  box-shadow: 2px 2px 2px gray;
 }
 
 .projects-all {
@@ -76,5 +80,55 @@ body {
 .sarah1 {
   border-radius: 100%;
   width: 60%;
-  margin-left: 8vw;
+  margin-left: 7vw;
+  border: 3px solid #ac6195;
+  box-shadow: 3px 3px 3px gray;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+h2 {
+  padding-top: 50px;
+}
+
+.icons {
+  padding-top: 20px;
+  width: 80%;
+}
+
+.insta,
+.github,
+.mail,
+.linkedin {
+  width: 10%;
+  margin-right: 30px;
+}
+
+.insta:hover,
+.github:hover,
+.mail:hover,
+.linkedin:hover {
+  box-shadow: 3px 3px 3px gray;
+}
+
+.insta,
+.mail {
+  border-radius: 20px;
+}
+
+.github {
+  border-radius: 50px;
+}
+
+.linkedin {
+  border-radius: 10px;
+}
+
+.projects {
+  grid-template-columns: 200px 200px;
+  grid-row: auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 }
