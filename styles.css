@@ -16,7 +16,7 @@ body {
 }
 
 .header {
-  background-color: rgb(242, 237, 229, 0.5);
+  background-color: rgb(242, 237, 229, 0.9);
   top: 0;
   position: sticky;
 }
@@ -30,7 +30,7 @@ body {
   font-weight: bold;
   font-size: large;
   z-index: 2;
-  padding-left: 50px;
+  padding-left: 70px;
 }
 
 .arrow {
@@ -46,4 +46,35 @@ body {
 
 .jump:hover {
   color: rgb(120, 113, 102);
+}
+
+.projects-all {
+  padding-left: 70px;
+}
+
+.desc {
+  font-size: x-large;
+  font-weight: 10;
+}
+
+.purple {
+  color: #ac6195;
+}
+
+.top {
+  display: flex;
+}
+
+.left {
+  flex: 60%;
+}
+
+.right {
+  flex: 40%;
+}
+
+.sarah1 {
+  border-radius: 100%;
+  width: 60%;
+  margin-left: 8vw;
 }
