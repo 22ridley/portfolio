@@ -19,6 +19,7 @@ body {
   background-color: rgb(242, 237, 229, 0.9);
   top: 0;
   position: sticky;
+  height: 100px;
 }
 
 .header-links {
@@ -42,7 +43,7 @@ body {
   cursor: pointer;
   text-decoration: none;
   color: black;
-  border: 4px solid rgb(242, 237, 229, 0);
+  border: 2px solid rgb(242, 237, 229, 0);
   padding: 10px;
 }
 
@@ -81,6 +82,7 @@ body {
 
 .sarah1 {
   border-radius: 100%;
+  margin-bottom: 10px;
   width: 60%;
   margin-left: 7vw;
   border: 3px solid #ac6195;
@@ -93,6 +95,11 @@ h1 {
 
 h2 {
   padding-top: 50px;
+  padding-bottom: 20px;
+  font-size: xx-large;
+}
+
+.project-all h2 {
   padding-bottom: 30px;
 }
 
@@ -107,6 +114,7 @@ h2 {
 .linkedin {
   width: 10%;
   margin-right: 30px;
+  border: 2.5px solid #f2ede5;
 }
 
 .insta:hover,
@@ -114,6 +122,7 @@ h2 {
 .mail:hover,
 .linkedin:hover {
   box-shadow: 3px 3px 3px gray;
+  border: 3px solid #ac6195;
 }
 
 .insta,
@@ -140,19 +149,46 @@ h2 {
 .prev {
   width: 30vw;
   border-radius: 10px;
+  border: 1px solid #f2ede5;
 }
 
 .prev:hover {
-  border: 4px solid #ac6195;
+  border: 3px solid #ac6195;
   box-shadow: 4px 4px 4px gray;
 }
 
 h3 {
   padding-right: 20px;
+  font-size: x-large;
+  padding-top: 20px;
 }
 
 .project p {
   padding-right: 15vw;
   line-height: 150%;
   font-size: large;
+}
+
+.about p {
+  font-size: 20px;
+  line-height: 150%;
+}
+
+.about {
+  display: flex;
+}
+
+.about .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.about-pic {
+  margin-bottom: 10px;
+  border-radius: 100%;
+  width: 65%;
+  margin-left: 7vw;
+  border: 3px solid #ac6195;
+  box-shadow: 3px 3px 3px gray;
 }
