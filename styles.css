@@ -94,7 +94,7 @@ h1 {
 }
 
 h2 {
-  padding-top: 50px;
+  padding-top: 30px;
   padding-bottom: 20px;
   font-size: xx-large;
 }
@@ -191,4 +191,12 @@ h3 {
   margin-left: 7vw;
   border: 3px solid #ac6195;
   box-shadow: 3px 3px 3px gray;
+}
+
+.link {
+  color: #ac6195;
+}
+
+.link:hover {
+  color: #5d244c;
 }
