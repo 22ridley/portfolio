@@ -30,6 +30,45 @@
           collab hours in CSCI0320: Introduction to Software Engineering at
           Brown.
         </p>
+        <h3>Process</h3>
+        <p>
+          I developed this project on a team of 4 for my final project as a
+          student in CSCI0320. Our idea came from the lack of organization of
+          collab hours in the course, where students in the course serve as one
+          anothers' TAs. Prior to our system, the real TAs used google forms to
+          pair students serving as TAs and students needing help. We realized we
+          could streamline this process in one full stack application.
+        </p>
+        <p>
+          We built the backend in Java and the frontend with React and
+          TypeScript. In particular, I focused on building the backend and
+          ensuring that it was thread safe and could handle requests from many
+          students at once. I did so through two queues, one from students
+          serving as TAs and one for students needing help, and continuously
+          popped and paired from the queues.
+        </p>
+        <h3>Result</h3>
+        <p>
+          Two semesters after developing this application as my final project in
+          CSCI0320, I became a TA for the course. I pitched the idea of using my
+          application in practice, and the head TAs agreed. This gave me the
+          unique opportunity to deploy the frontend and backend and test the
+          application with real users.
+        </p>
+        <p>
+          After I deployed the system for the course, it experienced a variety
+          of concurrency and storage issues, which I resolved throughout the
+          semester. The application is still currently live and available to
+          CSCI0320 students below.
+        </p>
+        <a
+          href="https://cs0320.github.io/collab-manager/#/login"
+          target="_blank"
+          ><img
+            src="public/collab-full.png"
+            alt="Collab Manager Application"
+            class="project-full"
+        /></a>
       </div>
     </div>
   </body>

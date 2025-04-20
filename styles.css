@@ -211,4 +211,29 @@ h3 {
 
 .project-page p {
   font-size: large;
+  line-height: 150%;
+}
+
+.project-full {
+  margin-top: 30px;
+  width: 98%;
+  border-radius: 25px;
+  border: 2px solid #f2ede5;
+}
+
+.project-full:hover {
+  border: 3px solid #ac6195;
+  box-shadow: 3px 3px 3px gray;
+}
+
+.project-half {
+  width: 40%;
+  margin-right: 7.5vw;
+  border-radius: 25px;
+  border: 2px solid #f2ede5;
+}
+
+.project-half:hover {
+  border: 3px solid #ac6195;
+  box-shadow: 3px 3px 3px gray;
 }
