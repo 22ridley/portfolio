@@ -414,11 +414,19 @@ summary {
 .col-box {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  gap: 30px;
 }
 
 .col-box-item {
-  width: 32%;
+  flex: 1;
+  background-color: #d8adcc;
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px gray;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .figma {
@@ -427,4 +435,8 @@ summary {
   border-radius: 15px;
   box-shadow: 3px 3px 3px gray;
   margin-bottom: 10px;
+}
+
+.col-box-item li {
+  font-size: medium;
 }
