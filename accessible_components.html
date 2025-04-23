@@ -43,10 +43,243 @@
             <p>Figma, HTML, CSS</p>
           </div>
         </div>
-        <h3>Process</h3>
+        <h3>Introduction</h3>
         <p></p>
-        <h3>Result</h3>
-        <p></p>
+        <h3>Input</h3>
+        <p>
+          I began by examining three applications with dropdown menus, including
+          the EdStem website, the Appple Calendar web/mobile app, and the
+          Starbucks website/mobile app. For context, EdStem is a message board
+          platform that facilitates student, TA, and professor interactions in
+          use at Brown University. I first explored how different modes of
+          input, including the mouse/touchpad, keyboard, and touch (on mobile)
+          enabled different interactions with a dropdown menus in these three
+          applications.
+        </p>
+        <h3>Output</h3>
+        <p>
+          After exploring inputs, I also explored outputs from the dropdown
+          menus on these three applications. The inputs can change the state of
+          a dropdown component, and the output reflects these state changes to
+          the user. I explored outputs including colors, text label, focus
+          order, and screen reader output.
+        </p>
+        <h3>State Models</h3>
+        <p>
+          After exploring input and output from dropdowns on EdStem, Apple
+          Calendar, and Starbucks, I had several ideas about how to improve the
+          dropdown components found in all three applications. However, this
+          case study will focus on my redesign of the calendar dropdown menu in
+          Apple Calendar.
+        </p>
+        <p>
+          Before beginning my redesign, I created state models to display the
+          current interactions with Apple Calendar's calendar dropdown menu.
+          State models show both the available states of the component, as well
+          as the actions that transition between states. Below, the two state
+          models display pre-revision interactions with the touchpad and the
+          keyboard respectively. Note that I often refer to pink highlights or
+          borders, which is a Mac system setting that users customize, so these
+          components are not pink for all users.
+        </p>
+        <br />
+        <p><b>Initial Calendar Dropdown Menu Component: Mouse User</b></p>
+        <div class="image-box">
+          <img
+            src="public/acc/initial-calendar-model-mouse.svg"
+            alt="State model for pre-revision mouse interactions with calendar dropdown menu on Apple Calendar"
+            width="60%"
+          />
+          <p class="left-pad">
+            Given that this is the state model for mouse interactions, the
+            user's mouse position and clicks cause all transitions between
+            states. Another important note is that "Open" means that the
+            dropdown menu has appeared. As shown in the state model, the
+            dropdown menu stays visible even when the mouse leaves the area, but
+            disappears if the mouse clicks outside of the dropdown menu area.
+          </p>
+        </div>
+        <br />
+        <p><b>Initial Calendar Dropdown Menu Component: Keyboard User</b></p>
+        <div class="image-box">
+          <div class="right-pad">
+            <p>
+              As described in the input and output sections, without VoiceOver,
+              I was unable to focus on the dropdown menu button with only my
+              keyboard on Mac. So, this state model is missing a transition from
+              inactive to focused, although it should be noted that the button
+              can be tabbed into focus when VoiceOver is active.
+            </p>
+            <p>
+              Once the calendar dropdown menu button is focused, then users can
+              press the return key, up and down arrows, and escape key to
+              transition between states, as shown.
+            </p>
+          </div>
+          <img
+            src="public/acc/initial-calendar-model-keyboard.svg"
+            alt="State model for pre-revision keyboard interactions with calendar dropdown menu on Apple Calendar"
+            width="60%"
+          />
+        </div>
+        <p>
+          As noted above, there are several areas of improvement for these state
+          models. Below, I present two new state models for my revised calendar
+          dropdown, with mouse and with keyboard. The main design change I made
+          includes adding a "Confirm" button to the dropdown menu. I will
+          explore and justify this choice alongside the Figma models further
+          below.
+        </p>
+        <br />
+        <p><b>Revised Calendar Dropdown Menu Component: Mouse User</b></p>
+        <div class="image-box">
+          <img
+            src="public/acc/revised-calendar-model-mouse.svg"
+            alt="State model for revised keyboard interactions with calendar dropdown menu on Apple Calendar"
+            width="65%"
+          />
+          <p class="left-pad">
+            As mentioned, the main revision I made was introducing a "Confirm"
+            button on the dropdown menu. Now, after a user clicks one of the
+            dropdown options, they also need to click the "Confirm" button to
+            actually select their chosen option and close the dropdown menu. If
+            they do not select "Confirm" after clicking an option, and instead
+            click away, their selection will not be submitted.
+          </p>
+        </div>
+        <br />
+        <p><b>Revised Calendar Dropdown Menu Component: Keyboard User </b></p>
+        <div class="image-box">
+          <div class="right-pad">
+            <p>
+              For keyboard interaction, I added a transition from disabled to
+              focused with the tab key, which the initial state model lacked.
+            </p>
+            <p>
+              As in the revised mouse model, this revised keyboard model also
+              introduces a "Confirm" button. Once the user has focused on an
+              option with the up and down keys, when they press return, their
+              focused option is selected. This also automatically focuses the
+              "Confirm" button. So, the user needs to press the return key again
+              to activate the "Confirm" button and submit their selection.
+            </p>
+          </div>
+          <img
+            src="public/acc/revised-calendar-model-keyboard.svg"
+            alt="State model for revised keyboard interactions with calendar dropdown menu on Apple Calendar"
+            width="60%"
+          />
+        </div>
+        <h3>Component Redesign in Figma</h3>
+        <iframe
+          style="border: 1px solid rgba(0, 0, 0, 0.1)"
+          class="figma"
+          src="https://embed.figma.com/design/RAMYPpAGtqDIV2M9AyG27T/Accessible-Components?node-id=0-1&embed-host=share"
+          allowfullscreen
+        ></iframe>
+        <p>
+          This
+          <a
+            target="_blank"
+            href="https://www.figma.com/file/RAMYPpAGtqDIV2M9AyG27T?type=design&node-id=0%3A1&mode=design"
+            class="link"
+            >Figma model</a
+          >
+          is my redesign of the calendar dropdown menu in Apple Calendar, which
+          allows users to assign an event to a particular calendar. In the model
+          above, this dropdown is opened with the button with the blue square
+          and the up/down arrows, located in the event editing window. The model
+          contains three frames, described below:
+        </p>
+        <div class="col-box">
+          <div class="col-box-item">
+            <p><b>Revised Initial State</b></p>
+            <ul>
+              <li>
+                The first Figma frame displays the initial state of my revised
+                calendar dropdown menu. This is the state before the user has
+                interacted with the dropdown, so the dropdown button is visible
+                but the dropdown menu window has not been opened.
+              </li>
+            </ul>
+          </div>
+          <div class="col-box-item">
+            <p><b>Revised Open, Option Highlighted State</b></p>
+            <ul>
+              <li>
+                When the user opens the dropdown menu and hovers over (or
+                focuses on) an option, they will see the second frame. Here, the
+                dropdown menu is open and one of the options is highlighted.
+                However, the user has not clicked on (or pressed the return key
+                while focusing on) their selection yet.
+              </li>
+            </ul>
+          </div>
+          <div class="col-box-item">
+            <p><b>Revised Open, Option Selected State</b></p>
+            <ul>
+              <li>
+                This is a bonus state that is important to understanding my
+                redesign. After the user clicks on (or presses return on) an
+                option, that option turns dark gray, but is not yet submitted.
+                Instead, as shown, the user still must press the "Confirm"
+                button, which has automatically been focused on, to submit their
+                selection and close the dropdown menu.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p>
+          While not shown in the Figma models, the first way that my redesign
+          increases accessibility is by allowing users to focus on the dropdown
+          with their keyboard but without VoiceOver. This interaction was
+          surprisingly missing in Apple Calendar. The only way that this change
+          decreases efficiency is by adding one more component that keyboard
+          users need to tab through as they explore the event editing window.
+          However, this is an insignficant loss in efficiency that significantly
+          increases accessibility.
+        </p>
+        <p>
+          However, in other ways, my revised component does increase
+          accessibility at the expense of efficiency. Adding a "Confirm" button
+          means that frequent users have one more click or key to press before
+          they can submit their dropdown selection. However, this increases
+          accessibility beacuse it means that users with impaired motor control
+          are less likely to accidentally submit their selection. This is
+          because the extra confirmation transition allows users to accidentally
+          select an option, but change their selection without the window
+          closing (which is the current behavior of the component when any
+          option is clicked).
+        </p>
+        <h3>Reflections</h3>
+        <p>
+          When thinking about making components more accessible, it's useful to
+          think in terms of mismatches, or situations where an interface creates
+          unnecessary barriers for certain users due to a lack of inclusive
+          thinking. In my redesign, adding keyboard navigability addresses the
+          mismatch where users that only use the keyboard can still interact
+          with this component. Similarly, adding the "Confirm" button addresses
+          the mismatch where some users may accidentally press or interact with
+          these components, and the confirmation step is more forgiving of
+          accidental clicks.
+        </p>
+        <p>
+          In this sense, the lack of keyboard accessibility on the Apple
+          Calendar and Starbucks dropdowns negatively impacts users with visual
+          impairments, since focusing on the dropdown was impossible without
+          VoiceOver, which not all impaired users might use. On the other hand,
+          the ARIA text read by VoiceOver is a feature that is beneficial to
+          those with visual impairments, and across the three applications,
+          Starbucks' components had the most clear and descriptive ARIA text.
+        </p>
+        <p>
+          Generally, the mouse is most often prioritized when designing
+          components, as many designers are fully-abled. But, this means that
+          they may forget to consider the needs of those whose abilities are
+          impaired. In this case study, I learned to prioritize the needs of
+          users with abilities different from mine, while also prioritizing
+          usability.
+        </p>
       </div>
     </div>
   </body>
