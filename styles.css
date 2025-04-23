@@ -202,16 +202,21 @@ h3 {
 }
 
 .project-page {
-  padding-right: 90px;
+  padding-right: 100px;
 }
 
 .project-page h1 {
   padding-bottom: 20px;
 }
 
-.project-page p {
+.project-page p,
+.project-page li {
   font-size: large;
   line-height: 150%;
+}
+
+.project-page li {
+  padding-bottom: 15px;
 }
 
 .project-full {
@@ -235,5 +240,85 @@ h3 {
 
 .project-half:hover {
   border: 3px solid #ac6195;
+  box-shadow: 3px 3px 3px gray;
+}
+
+.bubbles {
+  display: flex;
+}
+
+.bubble4,
+.bubble3 {
+  background-color: #d8adcc;
+  margin: 10px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px gray;
+  text-align: center;
+}
+
+.bubble4 {
+  flex: 25%;
+}
+
+.bubble3 {
+  flex: 33%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+details {
+  font-size: large;
+  background-color: #d8adcc;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 3px 3px 3px gray;
+}
+
+details:open {
+  padding-bottom: 10px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 31.7%);
+  grid-template-rows: auto;
+  gap: 2vw;
+  padding-top: 10px;
+}
+
+.grid-item {
+  background-color: #d8adcc;
+  text-align: center;
+  font-size: large;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 3px 3px 3px gray;
+  padding-top: 20px;
+}
+
+.sketches-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 47%);
+  grid-template-rows: auto;
+  column-gap: 4vw;
+  row-gap: 2vw;
+  padding-top: 10px;
+}
+
+.sketch {
+  width: 100%;
+  border-radius: 10px;
   box-shadow: 3px 3px 3px gray;
 }

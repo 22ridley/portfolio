@@ -27,27 +27,295 @@
         <h1>Collab Manager Project</h1>
         <p>
           This project is a full stack web application deployed to administer
-          collab hours in CSCI0320: Introduction to Software Engineering at
-          Brown.
+          collab hours in
+          <b>CSCI0320: Introduction to Software Engineering</b> at Brown.
         </p>
-        <h3>Process</h3>
+        <div class="bubbles">
+          <div class="bubble4">
+            <h4>ROLE</h4>
+            <p>UI/UX Designer and Backend Developer</p>
+          </div>
+          <div class="bubble4">
+            <h4>TEAM</h4>
+            <p>Megan Ball, Rachel Brooks, Sarah Ridley, and Julia Zdzilowska</p>
+          </div>
+          <div class="bubble4">
+            <h4>TIMELINE</h4>
+            <p>November - December 2023</p>
+          </div>
+          <div class="bubble4">
+            <h4>SKILLS</h4>
+            <p>React, Typescript, CSS, Java</p>
+          </div>
+        </div>
+        <h3>Summary</h3>
         <p>
-          I developed this project on a team of 4 for my final project as a
-          student in CSCI0320. Our idea came from the lack of organization of
-          collab hours in the course, where students in the course serve as one
-          anothers' TAs. Prior to our system, the real TAs used google forms to
-          pair students serving as TAs and students needing help. We realized we
-          could streamline this process in one full stack application.
+          I worked on this project on a team of 4 for my final project as a
+          student in <b>CSCI0320</b>. We chose this project after noticing the
+          lack of organization of collab hours in the course, where students in
+          the course serve as one anothers' TAs.
         </p>
         <p>
-          We built the backend in Java and the frontend with React and
-          TypeScript. In particular, I focused on building the backend and
-          ensuring that it was thread safe and could handle requests from many
-          students at once. I did so through two queues, one from students
-          serving as TAs and one for students needing help, and continuously
-          popped and paired from the queues.
+          The goal of the application is to seamlessly pair and manage students
+          during collab hours. We built the backend in Java and the frontend
+          with React and TypeScript. In particular, I focused on building the
+          backend and ensuring that it was thread safe and could handle requests
+          from many students at once. Despite my backend-heavy work, I also
+          created the sketches for the frontend. Throughout the process, I
+          advocated for accessible features, including aria labels and color
+          schemes that are inclusive of low-vision users.
         </p>
-        <h3>Result</h3>
+        <h3>Key Terms</h3>
+        <ul>
+          <li>
+            <b>COLLAB HOURS</b>: Similar to office hours, but students (help
+            requesters) fix bugs and conceptual issues with the help of other
+            students in the class (debugging partners)
+          </li>
+          <li>
+            <b>DEBUGGING PARTNER</b>: Student scheduled to help others debug
+            their code
+          </li>
+          <li>
+            <b>HELP REQUESTER</b>: Student attending collab hours because they
+            need help
+          </li>
+          <li>
+            <b>INSTRUCTOR</b>: Teaching assistant or professor running collab
+            hours
+          </li>
+        </ul>
+        <h3>Problem</h3>
+        <p>
+          The core problem was <b>poor organization</b>. Prior to our system,
+          the instructors used google forms to pair students serving as TAs and
+          students needing help. there are many resources used in collaboration
+          hours, but the tools are scattered across various locations. This
+          project could ease this experience for students and instructors,
+          making collab hours more productive, organized and standardized.
+        </p>
+        <p>
+          We realized we could streamline this process in one full stack
+          application to make collab hours more productive, organized and
+          standardized.
+        </p>
+        <h3>User Research</h3>
+        <p>
+          The first step of our project was to conduct user research to
+          understand how to design our application to best address all of our
+          stakeholders' needs. Our stakeholders include the students and the
+          instructors (teaching assistants and the professor) of the course.
+          Here are the questions we asked our stakeholders:
+        </p>
+        <ul>
+          <li>What are the most important parts of collab section?</li>
+          <li>
+            What currently works and could be improved about collab section?
+          </li>
+          <li>
+            As a <b>*insert stakeholder*</b>, what features are non-negotiable
+            in an application to facilitate collab hours?
+          </li>
+          <li>
+            As a <b>*insert stakeholder*</b>, what features would be nice but
+            not necessary in an application to facilitate collab hours?
+          </li>
+        </ul>
+        <p>
+          Below are summaries of the responses we received from our
+          stakeholders:
+        </p>
+        <details>
+          <summary>Students</summary>
+          <ul>
+            <li>
+              Collab hours are useful skill for students to learn to help each
+              other.
+            </li>
+            <li>
+              At collab hours, TAs are often busy with logistics, leading to
+              longer wait times for escalation when the debugging partner can't
+              help.
+            </li>
+            <li>
+              Collab hours are currently not effective for conceptual questions.
+            </li>
+          </ul>
+        </details>
+        <details>
+          <summary>Teaching Assistants</summary>
+          <ul>
+            <li>
+              The pairing process could be improved, since some students debug
+              multiple times while others don't.
+            </li>
+            <li>
+              Currently, all TA duties (attendance, pairing, escalation) are
+              tracked on different platforms.
+            </li>
+            <li>
+              Some students try to escalate and get TA help before the 15 minute
+              period is over.
+            </li>
+          </ul>
+        </details>
+        <details>
+          <summary>Professor</summary>
+          <ul>
+            <li>
+              The learning goal of collab hours isnot achieved if not all
+              students are able to serve as a debugging partner.
+            </li>
+            <li>The structure of collab hours is likely changing in future.</li>
+            <li>
+              Despite its flaws, collab hours successful because disrupts the
+              traditional format of CS hours (lots of bugs fixed and shorter
+              lines).
+            </li>
+          </ul>
+        </details>
+        <h3>Features</h3>
+        <p>
+          After our user research, we had a more clear vision of what our
+          stakeholders needed out of our application for managing collab hours.
+          Here are the main features we needed to prioritize:
+        </p>
+        <div class="feature-grid">
+          <div class="grid-item">
+            <h4>Pairing</h4>
+            <p>
+              Queue for help requesters and a queue for debugging partners,
+              students will be paired in FIFO order
+            </p>
+          </div>
+          <div class="grid-item">
+            <h4>Removing</h4>
+            <p>
+              Ability for instructors to remove and/or flag a debugging partner
+              if they are absent
+            </p>
+          </div>
+          <div class="grid-item">
+            <h4>Escalating</h4>
+            <p>
+              Available on the debugging partner dashboard after 15 minutes on
+              the timer, and the instructor dashboard will have a list of who is
+              escalated
+            </p>
+          </div>
+          <div class="grid-item">
+            <h4>Initiating/Ending</h4>
+            <p>
+              Instructors have the ability to begin and end the collab hours
+              session after the time block is over
+            </p>
+          </div>
+          <div class="grid-item">
+            <h4>Dashboards</h4>
+            <p>
+              Separate views for instructors, help requesters, and debugging
+              partners
+            </p>
+          </div>
+          <div class="grid-item">
+            <h4>Debugging Form</h4>
+            <p>
+              The form will be embedded on the website instead of a separate
+              google form, and answers will be saved to CSV on the backend
+            </p>
+          </div>
+          <div class="grid-item">
+            <h4>Attendance</h4>
+            <p>
+              Automatically collected from student login, and instructors can
+              download
+            </p>
+          </div>
+          <div class="grid-item">
+            <h4>Question Type</h4>
+            <p>
+              Help requesters can choose whether they have a bug or conceptual
+              question
+            </p>
+          </div>
+          <div class="grid-item">
+            <h4>Authentication</h4>
+            <p>
+              Students and instructors log in with Google via Firebase
+              authentication
+            </p>
+          </div>
+        </div>
+        <h3>Sketches</h3>
+        <p>
+          After deciding on our principal features together, I took on the task
+          of creating sketches for the user interfaces. My goal in this design
+          was to create dashboards that are <b>simple</b> and <b>accessible</b>.
+          Creating these sketches also helped me imagine how the application
+          would flow between these pages.
+        </p>
+        <div class="sketches-grid">
+          <div>
+            <p><b>Login Page</b></p>
+            <img class="sketch" src="public/login-mock.png" />
+          </div>
+          <div>
+            <p><b>Student Role Selection</b></p>
+            <img class="sketch" src="public/select-role-mock.png" />
+          </div>
+          <div>
+            <p><b>Help Requester Question Selection</b></p>
+            <img class="sketch" src="public/select-issue-mock.png" />
+          </div>
+          <div>
+            <p><b>Help Requester View</b></p>
+            <img class="sketch" src="public/help-requester-mock.png" />
+          </div>
+          <div>
+            <p><b>Debugging Partner View</b></p>
+            <img class="sketch" src="public/debugging-partner-mock.png" />
+          </div>
+          <div>
+            <p><b>Instructor View</b></p>
+            <img class="sketch" src="public/instructor-mock.png" />
+          </div>
+        </div>
+        <h3>Website</h3>
+        <p>
+          Finally, the largest part of this project was building the frontend
+          and backend of the website. As mentioned, I focused on building the
+          backend in Java, and my teammates worked on developing the frontend in
+          React and Typescript. We started by mocking the frontend and backend,
+          and worked through an iterative process over 4 weeks, sharing our
+          designs and feedback with one another. Below is the final website:
+        </p>
+        <div class="sketches-grid">
+          <div>
+            <p><b>Login Page</b></p>
+            <img class="sketch" src="public/login.png" />
+          </div>
+          <div>
+            <p><b>Student Role Selection</b></p>
+            <img class="sketch" src="public/select-role.png" />
+          </div>
+          <div>
+            <p><b>Help Requester Question Selection</b></p>
+            <img class="sketch" src="public/select-issue.png" />
+          </div>
+          <div>
+            <p><b>Help Requester View</b></p>
+            <img class="sketch" src="public/help-requester.png" />
+          </div>
+          <div>
+            <p><b>Debugging Partner View</b></p>
+            <img class="sketch" src="public/debugging-partner.png" />
+          </div>
+          <div>
+            <p><b>Instructor View</b></p>
+            <img class="sketch" src="public/instructor.png" />
+          </div>
+        </div>
+        <h3>Reflections</h3>
         <p>
           Two semesters after developing this application as my final project in
           CSCI0320, I became a TA for the course. I pitched the idea of using my
@@ -58,17 +326,18 @@
         <p>
           After I deployed the system for the course, it experienced a variety
           of concurrency and storage issues, which I resolved throughout the
-          semester. The application is still currently live and available to
-          CSCI0320 students below.
+          semester. In this process, I also saw that importance of protecting
+          user privacy up close, given that debugging the backend, I could see
+          complete logs of user interactions.
         </p>
-        <a
-          href="https://cs0320.github.io/collab-manager/#/login"
-          target="_blank"
-          ><img
-            src="public/collab-full.png"
-            alt="Collab Manager Application"
-            class="project-full"
-        /></a>
+        <p>
+          If I could do this project again, I would have brought up concerns of
+          user privacy earlier in the development process, and explicitly
+          collected consent for the informatino we collected. Overall, this
+          project was a great opportunity to learn how to conduct user research,
+          iteratively build a full stack application, and resolve bugs once it
+          was deployed.
+        </p>
       </div>
     </div>
   </body>
