@@ -19,7 +19,12 @@ body {
   background-color: rgb(242, 237, 229, 0.9);
   top: 0;
   position: sticky;
-  height: 100px;
+}
+
+hr {
+  border-top: 7px dashed #d8adcc;
+  margin-right: 80px;
+  margin-left: 80px;
 }
 
 .header-links {
@@ -27,11 +32,26 @@ body {
   display: flex;
   justify-content: space-between;
   color: black;
-  padding: 30px;
+  padding-top: 30px;
+  padding-bottom: 25px;
   font-weight: bold;
   font-size: large;
   z-index: 2;
   padding-left: 80px;
+  max-height: 46px;
+}
+
+.project-header-links {
+  max-width: 85%;
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  font-weight: bold;
+  font-size: small;
+  z-index: 2;
+  padding-left: 90px;
 }
 
 .arrow {
@@ -47,10 +67,22 @@ body {
   padding: 10px;
 }
 
+.proj-jump {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
 .jump:hover {
   border-radius: 20px;
   border: 3px solid #ac6195;
   box-shadow: 2px 2px 2px gray;
+}
+
+.proj-jump:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: #5d244c;
 }
 
 .page-all {
@@ -525,4 +557,8 @@ th {
   display: flex;
   padding-left: 35%;
   gap: 10px;
+}
+
+h3 {
+  scroll-margin-top: calc(190px);
 }
