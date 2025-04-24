@@ -429,6 +429,10 @@ summary {
   padding-right: 30px;
 }
 
+.col-box-item p {
+  text-align: center;
+}
+
 .figma {
   width: 100%;
   height: 500px;
@@ -460,4 +464,65 @@ td {
 th {
   background-color: #d8adcc;
   font-size: large;
+}
+
+.sss,
+.sss2 {
+  display: grid;
+  grid-template-columns: 0.29fr 0.43fr 1fr;
+  column-gap: 25px;
+  padding-right: 15px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.sss2 {
+  grid-template-columns: 0.315fr 0.425fr 1fr;
+}
+
+.sss p,
+.sss2 p {
+  font-size: medium;
+}
+
+.ss {
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px gray;
+  border: 3px solid #ac6195;
+}
+
+.two-two-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 48%);
+  grid-template-rows: auto;
+  gap: 2vw;
+  padding-top: 10px;
+}
+
+.grid-item li {
+  text-align: left;
+}
+
+.grid-item .link {
+  color: #5d244c;
+}
+
+.grid-item .link:hover {
+  color: #28081f;
+}
+
+.figma2 {
+  width: 85%;
+  height: 600px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px gray;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.grid-item-w-icon {
+  display: flex;
+  padding-left: 35%;
+  gap: 10px;
 }

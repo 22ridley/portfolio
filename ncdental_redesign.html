@@ -43,10 +43,404 @@
             <p>Figma, HTML, CSS</p>
           </div>
         </div>
-        <h3>Process</h3>
-        <p></p>
-        <h3>Result</h3>
-        <p></p>
+        <h3>Introduction</h3>
+        <p>
+          'Responsive' websites use HTML and CSS to automatically resize or
+          rearrange their content as the screen's dimensions change. Many
+          high-profile websites prioritize responsiveness, however, many others
+          with less resources for development and maintenance do not react to
+          screen dimensions. I will take one such website and redesign its
+          homepage for responsiveness.
+        </p>
+        <h3>Identification</h3>
+        <p>
+          The website I identified for this redesign is the homepage for the
+          <a
+            href="https://www.ncdentalboard.org/index.htm"
+            target="_blank"
+            class="link"
+            >North Carolina State Board of Dental Examiners (NCSBDE)</a
+          >. I chose this website because it provides important information that
+          pertains to many North Carolina citizens, however, it seems that the
+          board has not invested the resources to make their site responsive.
+        </p>
+        <p><b>Screenshots</b></p>
+        <p>
+          The screenshots below display the current
+          <a
+            href="https://www.ncdentalboard.org/index.htm"
+            target="_blank"
+            class="link"
+            >NCSBDE website</a
+          >
+          at various screen widths (375x667px, 768x1024px, and 3840x2160px).
+          These screen widths represent the view on mobile, tablet, and computer
+          respectively. As shown, the website does not consistently resize or
+          rearrange its content depending on screen size, and instead, content
+          often gets cut off.
+        </p>
+        <div class="sss">
+          <img
+            src="public/ncdental/og-phone-screen.png"
+            width="100%"
+            class="ss"
+            alt="Screenshot of NCSBDE website from phone"
+          />
+          <img
+            src="public/ncdental/og-tablet-screen.png"
+            width="100%"
+            class="ss"
+            alt="Screenshot of NCSBDE website from tablet"
+          />
+          <img
+            src="public/ncdental/og-large-screen.png"
+            width="100%"
+            class="ss"
+            alt="Screenshot of NCSBDE website from large screen"
+          />
+
+          <p>Mobile (375x667px)</p>
+          <p>Tablet (768x1024px)</p>
+          <p>Computer (3840x2160px)</p>
+        </div>
+        <h3>Usability & Accessibility Analysis</h3>
+        <p>
+          After exploring the NCSBDE homepage, I compiled this table of the
+          <a
+            class="link"
+            target="_blank"
+            href="https://www.nngroup.com/articles/usability-101-introduction-to-usability/"
+            >usability</a
+          >
+          (learnability, memorability, and efficiency) and accessibility issues
+          I identified with the website. To detect accessibility issues, I used
+          the tool
+          <a class="link" href="https://wave.webaim.org/" target="_blank"
+            >WebAIM WAVE</a
+          >, which automatically detects possible accessibility problems.
+        </p>
+        <div class="two-two-grid">
+          <div class="grid-item">
+            <div class="grid-item-w-icon">
+              <h4>Learnability</h4>
+              <img
+                src="public/ncdental/thumbs_down.svg"
+                alt="Thumbs down icon"
+                width="6%"
+              />
+            </div>
+            <ul>
+              <li>
+                Since learnability refers to the ability of new users to
+                accomplish tasks, one learnability problem is the presence of
+                many external deadlinks on the page. For example, the pages
+                tries to link to the NC Secretary of State website,
+                <a href="www.secstate.state.nc.us" target="_blank" class="link"
+                  >www.secstate.state.nc.us</a
+                >, but this is a deadlink, which is confusing for new and old
+                users.
+              </li>
+              <li>
+                The NCSBDE homepage also links to other pages within the NCSBDE
+                site in confusing and disjointed ways, since there is a header
+                in purple of pages to navigate to, another row in red of pages
+                below that, as well as a column along the left side of other
+                pages. This disjoint makes it diffult for new users to find the
+                page they need.
+              </li>
+            </ul>
+          </div>
+          <div class="grid-item">
+            <div class="grid-item-w-icon">
+              <h4>Memorability</h4>
+              <img
+                src="public/ncdental/thumbs_down.svg"
+                alt="Thumbs down icon"
+                width="6%"
+              />
+            </div>
+            <ul>
+              <li>
+                The sheer number of navigable pages from the homepage makes it
+                difficult to remember where a page you have been to before is.
+                Also, several of these links are very similar and could be
+                consolidated for efficiency, like 'Anesthesia/Sedation Permits'
+                and 'License & Permits'.
+              </li>
+              <li>
+                Another memorability problem with the NCSBDE website is the lack
+                of coordination of colors. The top header nav bar is purple,
+                while the nav bar below that is red, and the nav bar column
+                along the left has no background color. Colors can be a valuable
+                memory trigger, so a lack of standardization further impedes
+                returning users' abilities to navigate the page.
+              </li>
+            </ul>
+          </div>
+          <div class="grid-item">
+            <div class="grid-item-w-icon">
+              <h4>Efficiency</h4>
+              <img
+                src="public/ncdental/thumbs_down.svg"
+                alt="Thumbs down icon"
+                width="6%"
+              />
+            </div>
+            <ul>
+              <li>
+                If the user clicks 'Verification/Disciplinary History' on the
+                left column, several other links in the left column disappear,
+                including `Anesthesia/ Sedation Permits'. This inconsistency in
+                the left column nav bar happens on several pages. This impedes
+                efficiency because users have to return to the homepage in
+                between.
+              </li>
+              <li>
+                The height of this homepage also impedes efficiency because this
+                homepage has 25 long subsections. There is no table of contents
+                nor hyperlinks to these subsubsections, so even experienced
+                users who know where they need to go still have to spend a lot
+                of time scrolling to get there.
+              </li>
+            </ul>
+          </div>
+          <div class="grid-item">
+            <div class="grid-item-w-icon">
+              <h4>Accessibility</h4>
+              <img
+                src="public/ncdental/thumbs_down.svg"
+                alt="Thumbs down icon"
+                width="6%"
+              />
+            </div>
+            <p>WebAIM Wave discovered many accessibility issues:</p>
+            <ul>
+              <li>
+                'No heading structure': The page has no headings, instead, all
+                the text is within a div, span, or p, and manually styled. This
+                makes it more difficult for screen readers to report the
+                structure of this page to users.
+              </li>
+              <li>
+                'Null or empty alternative text': None of the images on this
+                page have alternative text. This means that Screen Readers
+                cannot report their contents to visually impaired users.
+              </li>
+              <li>
+                'Very low contrast between text and background colors': The
+                section 'Functions of the Board' has green text and green
+                background with very close shades, increasing difficulties for
+                visually-impaired users.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <br />
+        <p>
+          As described, the NCSBDE website suffers from a variety of
+          learnability, memorability, efficiency, and accessibly issues. The
+          common themes are the confusing nature of the 3 separate nav
+          components, the lack of color coordination, the long height of the
+          page and lack of structure, and the lack of responsiveness to narrow
+          screens. Addressing each problem would improve the user experience and
+          ease of use, not just for those with accessibility issues or new
+          users, but for all users.
+        </p>
+        <h3>Visual Design Style Guide</h3>
+        <p>
+          After identifying these usability and accessibility issues, I
+          redesigned the homepage of the NCSBDE website with these concerns in
+          mind. Before recreating the website with HTML and CSS, I created a
+          visual design style guide and mockups with the design tool Figma.
+        </p>
+        <p>
+          This
+          <a
+            class="link"
+            target="_blank"
+            href="https://www.figma.com/design/ud9mBbdzXejlPnn4Bm5buS/Responsive-Redesign%3A-Visual-Design-Style-Guide?node-id=0-1&t=twRUJ3igwjVqfYoz-1"
+            >style guide</a
+          >
+          contains the main colors, typography, and reusable components for my
+          mockups and redesigned webpage. Creating a consistent palette and
+          matching components improved the coordination and cohesiveness of my
+          final redesign, and ideally improves the user experience.
+        </p>
+        <iframe
+          class="figma2"
+          src="https://embed.figma.com/design/SXUGpuok56VHbQY3wkgHCo/Responsive-Redesign%3A-Visual-Style-Guide?node-id=0-1&embed-host=share"
+          allowfullscreen
+        ></iframe>
+        <h3>Mockups</h3>
+        <p>
+          The
+          <a
+            class="link"
+            target="_blank"
+            href="https://www.figma.com/design/A6uMHLOGM2scEkHLfhESNo/Responsive-Redesign%3A-Mockups?node-id=0-1&t=3AQSzYvEnEKo3ikE-1"
+            >following mockups</a
+          >
+          display my redesign of the NCSBDE home page on mobile, tablet, and
+          desktop screens. This redesign prioritizes responsiveness by reusing
+          styling, layout, and components between screen sizes, while still
+          adjusting to new proportions.
+        </p>
+        <iframe
+          class="figma2"
+          src="https://embed.figma.com/design/xepPLByYeBk62SktIQbAAP/Responsive-Redesign%3A-Mockups?node-id=0-1&embed-host=share"
+          allowfullscreen
+        ></iframe>
+        <p>
+          My redesigns attempt to address the usability and accessibility issues
+          I identified earlier in the following ways.
+        </p>
+        <div class="two-two-grid">
+          <div class="grid-item">
+            <div class="grid-item-w-icon">
+              <h4>Learnability</h4>
+              <img
+                src="public/ncdental/thumbs_up.svg"
+                alt="Thumbs up icon"
+                width="6%"
+              />
+            </div>
+            <ul>
+              <li>
+                My redesign addresses learnabiity by consolidating the links to
+                other NCSBDE pages. On computer, these internal links are all
+                within the header and the dropdowns from the header. On mobile
+                and tablet, these internal links are within the hamburger popup.
+              </li>
+              <li>
+                Consolidating these links from 3 locations into only 1 component
+                makes the homepage more learnable because it centralizes
+                navigation and simplifies the experience for first-time users.
+              </li>
+            </ul>
+          </div>
+          <div class="grid-item">
+            <div class="grid-item-w-icon">
+              <h4>Memorability</h4>
+              <img
+                src="public/ncdental/thumbs_up.svg"
+                alt="Thumbs up icon"
+                width="6%"
+              />
+            </div>
+            <ul>
+              <li>
+                I addressed memorability by coordinating the color palette and
+                reducing the number of internal links in the header/hamburger
+                popup. First, I made the header, as well as all subsections of
+                the homepage, the color 'grape' to unify the navigational
+                components of the page.
+              </li>
+              <li>
+                By reducing the color palette to only a few coordinated accent
+                colors, the page is more cohesive and its elements are more
+                memorable to returning users. Also, reducing the number of
+                internal links makes it faster for returning users to find which
+                page they need to revisit.
+              </li>
+            </ul>
+          </div>
+          <div class="grid-item">
+            <div class="grid-item-w-icon">
+              <h4>Efficiency</h4>
+              <img
+                src="public/ncdental/thumbs_up.svg"
+                alt="Thumbs up icon"
+                width="6%"
+              />
+            </div>
+            <ul>
+              <li>
+                My redesign addresses efficiency by reducing the length of the
+                homepage. Instead of including all 25 subsections, I kept only
+                the five most recently-added subsections, and then added an
+                'Archive' section which would link to old subsections.
+              </li>
+              <li>
+                I also created a table of contents to scroll to each subsection,
+                which improves efficiency by allowing experienced users to
+                navigate to the section they need more quickly (instead of
+                scrolling manually).
+              </li>
+            </ul>
+          </div>
+          <div class="grid-item">
+            <div class="grid-item-w-icon">
+              <h4>Accessibility</h4>
+              <img
+                src="public/ncdental/thumbs_up.svg"
+                alt="Thumbs up icon"
+                width="6%"
+              />
+            </div>
+            <ul>
+              <li>
+                I addressed accessibility primarily by making the homepage
+                responsive, which allows users to access all functionalities of
+                the homepage regardless of screen size.
+              </li>
+              <li>
+                I also added alt text to all images, using headers to create
+                structure, and carefully chose font colors and background colors
+                to prioritize contrast and readability. Each of these choices
+                removes barriers from people with physical and visual
+                impairments to interact with the homepage.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <h3>Responsive Redesign</h3>
+        <p>
+          The final deployment of my redesigned NCSBDE website can be found
+          <a
+            class="link"
+            target="_blank"
+            href="https://22ridley.github.io/ncdentalboard/"
+            >here</a
+          >. The screenshots below display the redesigned website on mobile,
+          tablet, and computer screens.
+        </p>
+        <div class="sss2">
+          <img
+            src="public/ncdental/redesign-mobile-real.png"
+            width="100%"
+            class="ss"
+            alt="Screenshot of redesigned NCSBDE with mobile dimensions"
+          />
+          <img
+            src="public/ncdental/redesign-tablet-real.png"
+            width="100%"
+            class="ss"
+            alt="Screenshot of redesigned NCSBDE with tablet dimensions"
+          />
+          <img
+            src="public/ncdental/redesign-computer-real.png"
+            width="100%"
+            class="ss"
+            alt="Screenshot of redesigned NCSBDE with computer dimensions"
+          />
+          <p>Mobile (375x667px)</p>
+          <p>Tablet (768x1024px)</p>
+          <p>Computer (3840x2160px)</p>
+        </div>
+        <h3>Reflections</h3>
+        <p>
+          This redesign was a valuable exercise in critiquing the usability,
+          accessibility, and responsiveness of an existing website, and then
+          putting my observations into practice. For reference, the Visual
+          Redesign section specifically describes how I improved these areas.
+        </p>
+        <p>
+          I found it suprising how many important websites like the NCSBDE
+          homepage lack responsive features, impeding the user experience and
+          making actions more difficult. However, I also learned that building a
+          responsive website is not at all simple, and takes careful thought,
+          planning, and iteration.
+        </p>
       </div>
     </div>
   </body>
