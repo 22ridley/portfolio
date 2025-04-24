@@ -130,19 +130,54 @@
           <div class="col-box-item">
             <p><b>Mouse/Touchpad</b></p>
             <ul>
-              <li></li>
+              <li>
+                When I hover with my mouse over the dropdown button, it does not
+                change. Once I click the button, the menu appears over the
+                button. If I move my mouse on the screen, the dropdown menu
+                stays visible, but when I click anywhere other than the menu, it
+                disappears.
+              </li>
+              <li>
+                One gap in learnability is that the dropdown menu has an up and
+                a down arrow on the button, while many users would expect only a
+                down arrow. There is no text on this button, which not learnable
+                but is efficient from a space perspective.
+              </li>
             </ul>
           </div>
           <div class="col-box-item">
             <p><b>Keyboard</b></p>
             <ul>
-              <li></li>
+              <li>
+                Using only the keyboard to navigate this dropdown menu on Apple
+                Calendar was virtually impossible. With a calendar event open,
+                as I tabbed through the options on the editing window, the
+                dropdown menu button was never focused.
+              </li>
+              <li>
+                This component not being navigable with the keyboard makes it
+                unusable and inaccessible. This is a mismatch, since the
+                dropdown can only be used with a mouse or VoiceOver. Those who
+                rely on their keyboard due to physical impairments therefore
+                likely struggle to toggle an event's assigned calendar.
+              </li>
             </ul>
           </div>
           <div class="col-box-item">
             <p><b>Touch/Mobile</b></p>
             <ul>
-              <li></li>
+              <li>
+                On my phone, the dropdown menu pulls up and covers the right
+                half of my screen. I can scroll when the options overflow, click
+                to the left to leave the dropdown, or select a calendar option.
+              </li>
+              <li>
+                This dropdown is more learnable than on desktop because the name
+                of the current calendar is on the mobile dropdown menu button.
+                This is more learnable and memorable because the text helps new
+                users to more quickly understand that the dropdown will let them
+                select a different calendar for this event.
+              </li>
             </ul>
           </div>
         </div>
@@ -157,19 +192,55 @@
           <div class="col-box-item">
             <p><b>Mouse/Touchpad</b></p>
             <ul>
-              <li></li>
+              <li>
+                When I hover with my mouse over the dropdown button, it does not
+                change. When I click it, it turns green and the dropdown menu
+                opens over it. If I move my mouse on the screen, the menu stays
+                visible, but when I click anywhere other than the dropdown menu,
+                it closes.
+              </li>
+              <li>
+                Something that could improve efficiency would be adding a
+                "Favorites" section at the top of the dropdown where users could
+                save their preferred milk for easy clicking, since repeat
+                customers often have strong milk preferences.
+              </li>
             </ul>
           </div>
           <div class="col-box-item">
             <p><b>Keyboard</b></p>
             <ul>
-              <li></li>
+              <li>
+                With my keyboard, I used the tab key to focus on the dropdown
+                button, but when I pressed the return key, the menu did not
+                open. I later learned that with VoiceOver on, I could use the
+                keys Control + Option + Space to open the menu. However, this
+                combination does not work when VoiceOver is off.
+              </li>
+              <li>
+                Similar to Apple Calendar, I was disappointed that I failed to
+                navigate into the milk dropdown with my keyboard. Again, this
+                impedes the learnability, memorability, and efficiency of this
+                feature.
+              </li>
             </ul>
           </div>
           <div class="col-box-item">
             <p><b>Touch/Mobile</b></p>
             <ul>
-              <li></li>
+              <li>
+                On my phone, the dropdown menu comes up from the bottom and
+                covers almost the entire screen. I can scroll when the options
+                overflow, click to the X to leave the dropdown, or select a milk
+                option.
+              </li>
+              <li>
+                I appreciate that the Starbucks website and mobile app have
+                similar dropdown designs. This makes the platforms more
+                efficient for users who switch between the website and the
+                mobile app. This also makes both more learnable for those who
+                have already used the other.
+              </li>
             </ul>
           </div>
         </div>
@@ -181,6 +252,114 @@
           the user. I explored outputs including colors, text label, focus
           order, and screen reader output.
         </p>
+        <table style="width: 100%; table-layout: fixed">
+          <thead>
+            <tr style="height: 70px">
+              <th style="width: 8%"></th>
+              <th style="width: 30%">EdStem Web App</th>
+              <th style="width: 30%">Calendar Mac App/Mobile App</th>
+              <th style="width: 30%">Starbucks Web App/Mobile App</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th><b>Colors</b></th>
+              <td>
+                The "Filter" dropdown button turns blue on hover, which signals
+                that this "Filter" text is clickable. Once the dropdown menu is
+                open, when hovering over an option, it turns blue, signalling
+                that it can be selected.
+              </td>
+              <td>
+                Each calendar is assigned a color, and the button's color
+                changes to the color of the calendar selected. This color output
+                increases efficiency, because users learn what color calendar
+                they are looking for without needing to read the text in the
+                dropdown menu.
+              </td>
+              <td>
+                Hovering over the "Milk" dropdown button on the Starbucks
+                website on Mac, its color does not change. I don't find this
+                color output useful, since when you click the button, the
+                dropdown menu also appears, so you already know you've clicked
+                the button.
+              </td>
+            </tr>
+            <tr>
+              <th><b>Text Label</b></th>
+              <td>
+                The button to open this dropdown menu is initially labeled with
+                the text "Filter" and a downward arrow. However, after the user
+                selects a filter from the dropdown, the text label changes from
+                "Filter" to the name of the filter applied, such as "Unread", as
+                in my screenshots.
+              </td>
+              <td>
+                On Mac, there is no text label on the calendar dropdown button,
+                only the color of the calendar and the up and down arrows. On
+                mobile, the button does have text, and it is the calendar
+                currently selected for the event. This text output verifies to
+                users that they selected the correct calendar.
+              </td>
+              <td>
+                The dropdown button is labeled above it with “Milk”, to signal
+                that this dropdown selects a milk option, and the name of the
+                current milk. The default is 2% milk, but if the user selects a
+                different milk, the text label updates. Instead of a default, it
+                should start as “Not Selected”, and the user shouldn't be able
+                to buy the drink without selecting a milk.
+              </td>
+            </tr>
+            <tr>
+              <th><b>Focus Order</b></th>
+              <td>
+                Using the tab key, I can focus on the "Filter" dropdown button,
+                and then use the return key to open the menu. Then, I have to
+                use the up and down keys to switch between options, and the tab
+                key does nothing. In addition to the up and down keys, I think
+                the tab key should also work to switch between these options.
+              </td>
+              <td>
+                When I use the tab key inside this window, the dropdown menu is
+                never focused on. This sends confusing outputs/signals back to
+                the user. If they cannot focus on the dropdown menu, the
+                application is signalling that it is disabled or not clickable,
+                even though it is (and holds important functionality).
+              </td>
+              <td>
+                In the input section above, I found that I could focus on
+                Starbucks' dropdown using the tab key, but could not use the
+                keyboard to open the dropdown menu. Since the return key does
+                nothing, the user might be confused and think that they have
+                focused on the wrong component in their effort to customize
+                their milk selection.
+              </td>
+            </tr>
+            <tr>
+              <th><b>Screen Reader</b></th>
+              <td>
+                On my Mac, I turned on VoiceOver and focused on the "Filter"
+                dropdown button. VoiceOver reads out "Filter, menu pop up
+                collapsed, button". When I opened the dropdown menu, VoiceOver
+                read out "menu, ..." followed by each of the dropdown options.
+              </td>
+              <td>
+                When I turned VoiceOver on, I was able to use the tab key to
+                focus on the calendar dropdown button. I turned VoiceOver off
+                again and confirmed that I couldn't without it. This impedes
+                acccessibility, because not all impaired users use VoiceOver, or
+                a screen reader at all.
+              </td>
+              <td>
+                VoiceOver instructed me to press Control + Option + Space to
+                open the dropdown. I tried this keystroke again with VoiceOver
+                off, which did not work. Like Apple Calendar, Starbucks has
+                created an accessibility problem by mismatching the needs of
+                those that do not use VoiceOver.
+              </td>
+            </tr>
+          </tbody>
+        </table>
         <h3>State Models</h3>
         <p>
           After exploring input and output from dropdowns on EdStem, Apple
