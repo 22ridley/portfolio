@@ -395,7 +395,7 @@ summary {
 }
 
 .paper {
-  margin: 0px;
+  margin-top: 0px;
   display: flex;
   flex-direction: column;
   padding-bottom: 30px;
