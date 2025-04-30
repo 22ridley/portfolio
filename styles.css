@@ -566,3 +566,22 @@ th {
 h3 {
   scroll-margin-top: calc(190px);
 }
+
+@media only screen and (max-width: 800px) {
+  .header-links {
+    max-width: 70%;
+  }
+  .icons {
+    padding-top: 20px;
+    width: 130%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .sarah1 {
+    width: 80%;
+    margin-left: 0vw;
+    margin-right: 1vw;
+    margin-top: 20px;
+  }
+}
