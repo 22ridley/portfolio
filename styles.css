@@ -150,20 +150,24 @@ h2 {
 .linkedin {
   width: 10%;
   margin-right: 2.5vw;
-  border: 2.5px solid #f2ede5;
+  filter: brightness(0%);
 }
 
 .insta:hover,
 .github:hover,
 .mail:hover,
 .linkedin:hover {
-  box-shadow: 3px 3px 3px gray;
-  border: 3px solid #ac6195;
+  box-shadow: 4px 4px 4px gray;
+  filter: none;
 }
 
-.insta,
+.insta {
+  border-radius: 10px;
+}
+
 .mail {
-  border-radius: 20px;
+  border-radius: 8px;
+  margin-bottom: 5px;
 }
 
 .github {
@@ -172,6 +176,7 @@ h2 {
 
 .linkedin {
   border-radius: 10px;
+  width: 9%;
 }
 
 .projects {
