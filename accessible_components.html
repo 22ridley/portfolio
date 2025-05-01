@@ -255,8 +255,9 @@
           After exploring inputs, I also explored <b>outputs</b> from the
           dropdown menus on these three applications. The inputs can change the
           state of a dropdown component, and the output reflects these state
-          changes to the user. I explored outputs including colors, text label,
-          focus order, and screen reader output.
+          changes to the user. I explored outputs including <b>color</b>,
+          <b>text label</b>, <b>focus order</b>, and
+          <b>screen reader output</b>.
         </p>
         <table style="width: 100%; table-layout: fixed">
           <thead>
@@ -271,97 +272,174 @@
             <tr>
               <th><b>Colors</b></th>
               <td>
-                The "Filter" dropdown button turns blue on hover, which signals
-                that this "Filter" text is clickable. Once the dropdown menu is
-                open, when hovering over an option, it turns blue, signalling
-                that it can be selected.
+                <ul>
+                  <li style="font-size: medium">
+                    The "Filter" dropdown button turns blue on hover, which
+                    signals that this "Filter" text is clickable.
+                  </li>
+                  <li style="font-size: medium">
+                    Once the dropdown menu is open, when hovering over an
+                    option, it turns blue, signalling that it can be selected.
+                  </li>
+                </ul>
               </td>
               <td>
-                Each calendar is assigned a color, and the button's color
-                changes to the color of the calendar selected. This color output
-                increases efficiency, because users learn what color calendar
-                they are looking for without needing to read the text in the
-                dropdown menu.
+                <ul>
+                  <li style="font-size: medium">
+                    Each calendar is assigned a color, and the button's color
+                    changes to the color of the calendar selected.
+                  </li>
+                  <li style="font-size: medium">
+                    This increases efficiency, because users learn what color
+                    calendar they are looking for without needing to read the
+                    text in the dropdown menu.
+                  </li>
+                </ul>
               </td>
               <td>
-                Hovering over the "Milk" dropdown button on the Starbucks
-                website on Mac, its color does not change. I don't find this
-                color output useful, since when you click the button, the
-                dropdown menu also appears, so you already know you've clicked
-                the button.
+                <ul>
+                  <li style="font-size: medium">
+                    Hovering over the "Milk" dropdown button on the Starbucks
+                    website on Mac, its color does not change.
+                  </li>
+                  <li style="font-size: medium">
+                    I don't find this color output useful, since when you click
+                    the button, the dropdown menu also appears, so you already
+                    know you've clicked the button.
+                  </li>
+                </ul>
               </td>
             </tr>
             <tr>
               <th><b>Text Label</b></th>
               <td>
-                The button to open this dropdown menu is initially labeled with
-                the text "Filter" and a downward arrow. However, after the user
-                selects a filter from the dropdown, the text label changes from
-                "Filter" to the name of the filter applied, such as "Unread", as
-                in my screenshots.
+                <ul>
+                  <li style="font-size: medium">
+                    The button to open this dropdown menu is initially labeled
+                    with the text "Filter" and a downward arrow.
+                  </li>
+                  <li style="font-size: medium">
+                    However, after the user selects a filter from the dropdown,
+                    the text label changes from "Filter" to the name of the
+                    filter applied, such as "Unread".
+                  </li>
+                </ul>
               </td>
               <td>
-                On Mac, there is no text label on the calendar dropdown button,
-                only the color of the calendar and the up and down arrows. On
-                mobile, the button does have text, and it is the calendar
-                currently selected for the event. This text output verifies to
-                users that they selected the correct calendar.
+                <ul>
+                  <li style="font-size: medium">
+                    On Mac, there is no text label on the calendar dropdown,
+                    only the color and the up and down arrows. On mobile, the
+                    button does have text (the calendar currently selected for
+                    the event).
+                  </li>
+                  <li style="font-size: medium">
+                    This text output verifies to users that they selected the
+                    correct calendar.
+                  </li>
+                </ul>
               </td>
               <td>
-                The dropdown button is labeled above it with “Milk”, to signal
-                that this dropdown selects a milk option, and the name of the
-                current milk. The default is 2% milk, but if the user selects a
-                different milk, the text label updates. Instead of a default, it
-                should start as “Not Selected”, and the user shouldn't be able
-                to buy the drink without selecting a milk.
+                <ul>
+                  <li style="font-size: medium">
+                    The dropdown button is labeled above it with “Milk” and the
+                    name of the current milk. The default is 2% milk, but if the
+                    user selects a different milk, the text label updates.
+                  </li>
+                  <li style="font-size: medium">
+                    Instead of a default, it should start as “Not Selected”, and
+                    the user shouldn't be able to buy the drink without
+                    selecting a milk.
+                  </li>
+                </ul>
               </td>
             </tr>
             <tr>
               <th><b>Focus Order</b></th>
               <td>
-                Using the tab key, I can focus on the "Filter" dropdown button,
-                and then use the return key to open the menu. Then, I have to
-                use the up and down keys to switch between options, and the tab
-                key does nothing. In addition to the up and down keys, I think
-                the tab key should also work to switch between these options.
+                <ul>
+                  <li style="font-size: medium">
+                    Using the tab key, I can focus on the "Filter" dropdown
+                    button, and then use the return key to open the menu. Then,
+                    I have to use the up and down keys to switch between
+                    options, and the tab key does nothing.
+                  </li>
+                  <li style="font-size: medium">
+                    In addition to the up and down keys, I think the tab key
+                    should also work to switch between these options.
+                  </li>
+                </ul>
               </td>
               <td>
-                When I use the tab key inside this window, the dropdown menu is
-                never focused on. This sends confusing outputs/signals back to
-                the user. If they cannot focus on the dropdown menu, the
-                application is signalling that it is disabled or not clickable,
-                even though it is (and holds important functionality).
+                <ul>
+                  <li style="font-size: medium">
+                    When I use the tab key inside this window, the dropdown menu
+                    is never focused on. This sends confusing outputs/signals
+                    back to the user.
+                  </li>
+                  <li style="font-size: medium">
+                    If they cannot focus on the dropdown menu, the application
+                    is signalling that it is disabled or not clickable, even
+                    though it is (and holds important functionality).
+                  </li>
+                </ul>
               </td>
               <td>
-                In the input section above, I found that I could focus on
-                Starbucks' dropdown using the tab key, but could not use the
-                keyboard to open the dropdown menu. Since the return key does
-                nothing, the user might be confused and think that they have
-                focused on the wrong component in their effort to customize
-                their milk selection.
+                <ul>
+                  <li style="font-size: medium">
+                    In the input section above, I found that I could focus on
+                    Starbucks' dropdown using the tab key, but could not use the
+                    keyboard to open the dropdown menu.
+                  </li>
+                  <li style="font-size: medium">
+                    Since the return key does nothing, the user might be
+                    confused and think that they have focused on the wrong
+                    component in their effort to customize their milk selection.
+                  </li>
+                </ul>
               </td>
             </tr>
             <tr>
               <th><b>Screen Reader</b></th>
               <td>
-                On my Mac, I turned on VoiceOver and focused on the "Filter"
-                dropdown button. VoiceOver reads out "Filter, menu pop up
-                collapsed, button". When I opened the dropdown menu, VoiceOver
-                read out "menu, ..." followed by each of the dropdown options.
+                <ul>
+                  <li style="font-size: medium">
+                    On my Mac, I turned on VoiceOver and focused on the "Filter"
+                    dropdown button. VoiceOver reads out "Filter, menu pop up
+                    collapsed, button".
+                  </li>
+                  <li style="font-size: medium">
+                    When I opened the dropdown menu, VoiceOver read out "menu,
+                    ..." followed by each of the dropdown options.
+                  </li>
+                </ul>
               </td>
               <td>
-                When I turned VoiceOver on, I was able to use the tab key to
-                focus on the calendar dropdown button. I turned VoiceOver off
-                again and confirmed that I couldn't without it. This impedes
-                acccessibility, because not all impaired users use VoiceOver, or
-                a screen reader at all.
+                <ul>
+                  <li style="font-size: medium">
+                    When I turned VoiceOver on, I was able to use the tab key to
+                    focus on the calendar dropdown button. I turned VoiceOver
+                    off again and confirmed that I couldn't without it.
+                  </li>
+                  <li style="font-size: medium">
+                    This impedes acccessibility, because not all impaired users
+                    use VoiceOver, or a screen reader at all.
+                  </li>
+                </ul>
               </td>
               <td>
-                VoiceOver instructed me to press Control + Option + Space to
-                open the dropdown. I tried this keystroke again with VoiceOver
-                off, which did not work. Like Apple Calendar, Starbucks has
-                created an accessibility problem by mismatching the needs of
-                those that do not use VoiceOver.
+                <ul>
+                  <li style="font-size: medium">
+                    VoiceOver instructed me to press Control + Option + Space to
+                    open the dropdown. I tried this keystroke again with
+                    VoiceOver off, which did not work.
+                  </li>
+                  <li style="font-size: medium">
+                    Like Apple Calendar, Starbucks has created an accessibility
+                    problem by mismatching the needs of those that do not use
+                    VoiceOver.
+                  </li>
+                </ul>
               </td>
             </tr>
           </tbody>
@@ -513,9 +591,12 @@
             <ul>
               <li>
                 The first Figma frame displays the initial state of my revised
-                calendar dropdown menu. This is the state before the user has
-                interacted with the dropdown, so the dropdown button is visible
-                but the dropdown menu window has not been opened.
+                calendar dropdown menu.
+              </li>
+              <li>
+                This is the state before the user has interacted with the
+                dropdown, so the dropdown button is visible but the dropdown
+                menu window has not been opened.
               </li>
             </ul>
           </div>
@@ -524,9 +605,12 @@
             <ul>
               <li>
                 When the user opens the dropdown menu and hovers over (or
-                focuses on) an option, they will see the second frame. Here, the
-                dropdown menu is open and one of the options is highlighted.
-                However, the user has not clicked on their selection yet.
+                focuses on) an option, they will see the second frame.
+              </li>
+              <li>
+                Here, the dropdown menu is open and one of the options is
+                highlighted. However, the user has not clicked on their
+                selection yet.
               </li>
             </ul>
           </div>
@@ -537,6 +621,8 @@
                 This is a bonus state that is important to understanding my
                 redesign. After the user clicks on (or presses return on) an
                 option, that option turns dark gray, but is not yet submitted.
+              </li>
+              <li>
                 Instead, the user still must press "Confirm" to submit their
                 selection and close the dropdown.
               </li>
@@ -550,14 +636,14 @@
           was surprisingly missing in Apple Calendar.
         </p>
         <p>
-          The only way that this change decreases efficiency is by adding one
-          more component that keyboard users need to tab through as they explore
-          the event editing window. However, this is an insignficant loss in
-          efficiency that significantly increases accessibility.
+          The only way that this change decreases <b>efficiency</b> is by adding
+          one more component that keyboard users need to tab through as they
+          explore the event editing window. However, this is an insignficant
+          loss in efficiency that significantly increases accessibility.
         </p>
         <p>
           However, in other ways, my revised component does increase
-          accessibility at the expense of <b>efficiency</b>. Adding a "Confirm"
+          <b>accessibility</b> at the expense of efficiency. Adding a "Confirm"
           button means that frequent users have one more click or key to press
           before they can submit their dropdown selection. But, this increases
           accessibility beacuse it means that users with impaired motor control
@@ -567,23 +653,25 @@
         </p>
         <h3 id="ref">Reflections</h3>
         <p>
-          When thinking about making components more accessible, it's useful to
-          think in terms of <b>mismatches</b>, or situations where an interface
+          This case study was a valuable opportunity to intentionally design a
+          component with <b>accessibility</b> as the main priority. When
+          thinking about making components more accessible, it's useful to think
+          in terms of <b>mismatches</b>, or situations where an interface
           creates unnecessary barriers for certain users due to a lack of
-          inclusive thinking. In my redesign, adding keyboard navigability
-          addresses the mismatch where users that only use the keyboard can
-          still interact with this component.
+          inclusive thinking.
         </p>
         <p>
-          Similarly, adding "Confirm" addresses the mismatch where some users
-          may accidentally press or interact with these components, and the
-          confirmation step accomodates accidental clicks.
+          In my redesign, adding keyboard navigability addresses the mismatch
+          where users that only use the keyboard can still interact with this
+          component. Similarly, adding "Confirm" addresses the mismatch where
+          some users may accidentally press or interact with these components,
+          and the confirmation step accomodates accidental clicks.
         </p>
         <p>
           Generally, the mouse is most often prioritized when designing
           components, as many designers are fully-abled. But, this means that
           they may forget to consider the needs of those whose abilities are
-          impaired. In this case study, I learned to prioritize the needs of
+          impaired. So, in this case study, I learned to prioritize the needs of
           users with abilities different from mine, while considering carefully
           tradeoffs with <b>usability</b>.
         </p>

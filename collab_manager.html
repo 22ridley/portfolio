@@ -63,8 +63,8 @@
         <p>
           I worked on this project on a team of 4 for my final project as a
           student in <b>CSCI0320</b>. We chose this project after noticing the
-          lack of organization of collab hours in the course, where students in
-          the course serve as one anothers' TAs.
+          lack of organization of collab hours in the course, where students
+          serve as one anothers' teaching assistants (TAs).
         </p>
         <p>
           The goal of the application is to seamlessly pair and manage students
@@ -73,16 +73,17 @@
           building the <b>backend</b> and ensuring that it was thread safe and
           could handle requests from many students at once. Despite my
           backend-heavy work, I also created the sketches for the frontend.
-          Throughout the design process, I prioritized
+          Throughout the design process, we prioritized
           <b>accessible</b> features, including aria labels and color schemes
           that are inclusive of low-vision users.
         </p>
         <h3 id="prob">Problem</h3>
         <p>
           The core problem was <b>poor organization</b>. Prior to our system,
-          the instructors used google forms to pair students serving as TAs and
-          students needing help. there are many resources used in collaboration
-          hours, but the tools are scattered across various locations.
+          <b>instructors</b> used Google forms to pair
+          <b>help requesters</b> and <b>debugging partners</b>. Also, there are
+          many resources used in collaboration hours, but the tools are
+          scattered across various locations.
         </p>
         <p>
           We realized we could streamline this process in one full stack
@@ -114,8 +115,8 @@
           The first step of our project was to conduct user research to
           understand how to design our application to best address all of our
           stakeholders' needs. Our stakeholders include the students and the
-          instructors (teaching assistants and the professor) of the course.
-          Here are the questions we asked our stakeholders:
+          instructors of the course. Here are the questions we asked our
+          stakeholders:
         </p>
         <ul>
           <li>What are the most important parts of collab section?</li>
@@ -322,8 +323,18 @@
           backend in <b>Java</b>, and my teammates worked on developing the
           frontend in <b>React</b> and <b>Typescript</b>. We started by mocking
           the frontend and backend, and worked through an iterative process over
-          4 weeks, sharing our designs and feedback with one another. Below is
-          the final website:
+          4 weeks, sharing our designs and feedback with one another.
+        </p>
+        <p>
+          As the main backend designer, I had the opportunity to design an
+          <b>efficient</b> and <b>reliable</b> system for pairing students. My
+          main concerns were that no students were dropped and did not receive
+          the help they needed, and that debugging partners could not cheat the
+          system and receive credit without showing up. To address the first, I
+          built two queues that continuously pop and pair debugging partners and
+          help requesters. I also built a feature to track attendance, and give
+          instructors the power to remove absent students from the record. Below
+          is the final website:
         </p>
         <div class="sketches-grid">
           <div>
@@ -378,9 +389,9 @@
         <h3 id="ref">Reflections</h3>
         <p>
           Two semesters after developing this application as my final project in
-          CSCI0320, I became a TA for the course. I pitched the idea of using my
-          application in practice to run collab hours, and the head TAs agreed.
-          This gave me the unique opportunity to
+          CSCI0320, I became a TA for the course. I pitched the idea of using
+          this application in practice to run collab hours, and the head TAs
+          agreed. This gave me the unique opportunity to
           <b>deploy the frontend and backend</b> and test the application with
           <b>real student users</b>.
         </p>
@@ -396,12 +407,13 @@
         <p>
           If I could do this project again, I would have brought up concerns of
           user privacy earlier in the development process, and explicitly
-          collected consent for the information we collected. As students, there
-          is a reasonable expectation that instructors will collect data about
-          participation in course activites, yet it is still important that they
-          are informed of this collection. Overall, this project was a great
-          opportunity to learn how to conduct user research, iteratively build a
-          full stack application, and resolve bugs once it was deployed.
+          collected consent for the student information we tracked and stored.
+          As students, there is a reasonable expectation that instructors will
+          collect data about participation in course activites, yet it is still
+          important that they are informed of this collection. Overall, this
+          project was a great opportunity to learn how to conduct user research,
+          iteratively build a full stack application, and resolve bugs once it
+          was deployed.
         </p>
       </div>
     </div>
